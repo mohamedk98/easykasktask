@@ -1,0 +1,6 @@
+label,mat-label,mat-label{
+    color:black;
+}
+input::placeholder{
+    color:black
+}

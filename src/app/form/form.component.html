@@ -1,0 +1,311 @@
+<div class="container">
+
+    <mat-horizontal-stepper linear>
+      <ng-template matStepperIcon="edit">
+        <mat-icon>check</mat-icon>
+</ng-template>
+        <mat-step label="Basic Info" completed="" >
+          <form class="form-group form-group-lg" >
+            
+            <h1 class="h1-responsive text-center mx-auto font-weight-bold">Basic Info</h1>
+            <div class="row mb-5 ml-5">
+                <div class="col-12-lg mx-auto ">
+                    <label class="">Select Event Image to Upload</label> <br>
+                <input class=""  placeholder="Upload Event image" value="" type="file" label="Ticket Image">
+            </div>
+            </div>
+
+
+            <mat-divider></mat-divider>
+            
+            <div class="row mx-auto mt-5 mb-5 ">
+                <div class="col-6-sm mx-auto">
+                    <mat-form-field class="">
+                        <mat-label class="" >Event Name</mat-label>
+                        <input matInput placeholder="" value="" class="mx-auto" >
+                      </mat-form-field> 
+                </div>
+                <div class="col-6-sm mx-auto ">
+                    <mat-form-field>
+                        <mat-label >Select an Event Category</mat-label>
+                        <mat-select >
+                          <mat-option>None</mat-option>
+                          <mat-option value="option1">Automotive</mat-option>
+                          <mat-option value="option2">Car Accessory</mat-option>
+                          <mat-option value="option3">Clothes</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+         
+            </div>
+            <mat-divider></mat-divider>
+            
+            <div class="row mx-auto mt-5 mb-5 ">
+                <div class="col-12-sm mx-auto">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Event Describtion</mat-label>
+                        <textarea matInput matTextareaAutosize:true placeholder="Type your Event Describtion" value="" class="mx-auto inputlg w-100"></textarea>
+                      </mat-form-field> 
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="row mt-5 mb-5">
+                <div class="col-6-lg mx-auto">
+                    <mat-form-field>
+                        <mat-label>Event Duration</mat-label>
+                        <input matInput [matDatepicker]="picker" placeholder="Start Date">
+                        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field>
+                      <input matInput [matDatepicker]="pickerk" placeholder="End Date">
+                      <mat-datepicker-toggle matSuffix [for]="pickerk" ></mat-datepicker-toggle>
+                      <mat-datepicker #pickerk></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-6-lg mx-auto">
+                    <mat-form-field class="">
+                        <mat-label>Event Expiry Date</mat-label>
+                        <input matInput [matDatepicker]="pickerkk">
+                        <mat-datepicker-toggle matSuffix [for]="pickerkk"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerkk></mat-datepicker>
+                        
+                      </mat-form-field> 
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="row mt-5">
+                <div class="col-12-sm mx-auto">
+                    <mat-form-field class="">
+                        <mat-label>Event Address</mat-label>
+                        <input matInput placeholder="Address" value="" class="mx-auto" >
+                      </mat-form-field> 
+                </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <div class="col-12-sm mx-auto">
+                        <mat-form-field class="">
+                            <mat-label>Facebook Event Link</mat-label>
+                            <input matInput placeholder="Facebook event link" value="" class="mx-auto" >
+                          </mat-form-field> 
+                    </div>
+                    </div>
+         
+          </form>
+          <mat-divider></mat-divider>
+
+          <div class="row mt-3">
+              <div class="col-12-sm mx-auto">
+                <button mat-raised-button color="primary" matStepperNext class="mx-auto">Next</button>
+              </div>
+          </div>
+    
+        </mat-step>
+    
+
+        <mat-step label="Extra Info "  completed="" >
+          <form >
+            <h1 class="h1-responsive text-center mx-auto font-weight-bold mb-5">Extra Info</h1>
+           <div class="row">
+               <div class="col-12-sm mx-auto mb-3">
+                <mat-form-field class="">
+                    <mat-label>After Payment Message</mat-label>
+                    <textarea matInput matTextareaAutosize:true placeholder="Enter your message for your customer" value="" class="mx-auto"></textarea>
+                  </mat-form-field> 
+               </div>
+           </div>
+
+           <mat-divider></mat-divider>
+
+
+           <div class="row">
+            <div class="col-12-sm mx-auto mt-3 mb-5">
+             <mat-form-field class="mr-5">
+                 <mat-label >Delivery Terms</mat-label>
+                 <textarea matInput matTextareaAutosize:true placeholder="Enter your message for your customer" value="" class="mx-auto"></textarea>
+               </mat-form-field> 
+               <mat-form-field class="ml-5">
+                <mat-label>Return Terms</mat-label>
+                <textarea matInput matTextareaAutosize:true placeholder="Enter your message for your customer" value="" class="mx-auto"></textarea>
+              </mat-form-field> 
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+           <div class="row">
+               <div class="col-12-sm mx-auto mt-5">
+                <mat-label class="mr-5">Do you want to show this Event on your shop?
+                </mat-label>
+                <mat-slide-toggle class="ml-5"></mat-slide-toggle>
+               </div>
+           </div>
+           <div class="row">
+            <div class="col-12-sm mx-auto mt-5">
+             <mat-label class="mr-5">Do you want the fees to be on the buyer?</mat-label>
+             <mat-slide-toggle class="ml-5"></mat-slide-toggle>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12-sm mx-auto mt-5">
+             <mat-label class="mr-5">Do you want to apply Taxes for this Event?</mat-label>
+             <mat-slide-toggle class="ml-5"></mat-slide-toggle>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12-sm mx-auto mt-5">
+             <mat-label class="mr-5">Payment options</mat-label>
+             <mat-checkbox class="ml-2">Cash through AMAN</mat-checkbox>
+             <mat-checkbox class="ml-2">Mobile Wallet</mat-checkbox>
+             <mat-checkbox class="ml-2">Meeza</mat-checkbox>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12-sm mx-auto mt-5">
+             <mat-label class="mr-5">Payment Currency</mat-label>
+             <mat-form-field>
+                <mat-select >
+                  <mat-option>EGP</mat-option>
+                  <mat-option value="option1">USD</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col-12-sm mx-auto mt-5">
+             <mat-label class="mr-5">Cash Expiry Duration
+            </mat-label>
+            <mat-form-field>
+                <mat-select >
+                  <mat-option>3 Hours</mat-option>
+                  <mat-option value="option1">6 Hours</mat-option>
+                  <mat-option value="option2">12 Hours</mat-option>
+                  <mat-option value="option3">24 Hours</mat-option>
+                  <mat-option value="option3">48 Hours</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="row mt-3">
+            <div class="col-6-sm mx-auto">
+                <button mat-raised-button color="primary" matStepperPrevious class="mx-auto">Previous</button>
+
+            </div>
+            <div class="col-6-sm mx-auto">
+         
+              <button mat-raised-button color="primary" matStepperNext class="mx-auto pl-2">Next</button>
+            </div>
+        </div>
+          </form>
+        </mat-step>
+
+
+
+        <mat-step label="Add Ticket"  completed="" >
+            <form >
+                <h1 class="h1-responsive text-center mx-auto font-weight-bold">Ticket Info</h1>
+                <div class="row mb-5 ml-5">
+                    <div class="col-12-lg mx-auto ">
+                        <label class="">Select Ticket Image</label> <br>
+                    <input class=""  placeholder="Upload ticket image" value="" type="file" label="Ticket Image">
+                </div>
+                </div>
+                <mat-divider></mat-divider>
+
+                <div class="row mt-5 mb-5">
+                    <div class="col-6-sm mx-auto">
+                        <mat-form-field class="">
+                            <mat-label>Ticket Name</mat-label>
+                            <input matInput placeholder="Ticket Name"  class="mx-auto" >
+                          </mat-form-field> 
+                    </div>
+                    <div class="col-6-sm mx-auto">
+                        <mat-form-field class="">
+                            <mat-label>Ticket Price</mat-label>
+                            <input matInput placeholder="Ticket Price"  class="mx-auto" type="number" >
+                          </mat-form-field> 
+                    </div>
+                    </div>
+
+                    <mat-divider></mat-divider>
+
+                    <div class="row mt-5 mb-5">
+                        <div class="col-12-sm mx-auto">
+                            <mat-form-field class="">
+                                <mat-label>Ticket Describtion</mat-label>
+                                <textarea matInput placeholder="Ticket Describtion" value="" class="mx-auto" ></textarea>
+                              </mat-form-field> 
+                        </div>
+                        </div>
+                        <mat-divider></mat-divider>
+
+                        <div class="row mt-5 mb-5">
+                            <div class="col-4-sm mx-auto">
+                                <mat-form-field class="">
+                                    <mat-label>Available Quantity</mat-label>
+                                    <input matInput placeholder="Available Quantity"  class="mx-auto" type="number" >
+                                  </mat-form-field> 
+                            </div>
+                            <div class="col-4-sm mx-auto">
+                                <mat-form-field class="">
+                                    <mat-label>Max Quantity per sale</mat-label>
+                                    <input matInput placeholder="Max Quantity per sale"  class="mx-auto" type="number" >
+                                  </mat-form-field> 
+                            </div>
+                            <div class="col-4-sm mx-auto">
+                                <mat-form-field class="">
+                                    <mat-label>Ticket Expiry</mat-label>
+                                    <input matInput [matDatepicker]="pickert">
+                        <mat-datepicker-toggle matSuffix [for]="pickert"></mat-datepicker-toggle>
+                        <mat-datepicker #pickert></mat-datepicker>
+                                  </mat-form-field> 
+                            </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="row mt-3">
+                                <div class="col-6-sm mx-auto">
+                                    <button mat-raised-button color="primary" matStepperPrevious class="mx-auto">Previous</button>
+                    
+                                </div>
+                                <div class="col-6-sm mx-auto">
+                             
+                                  <button mat-raised-button color="primary" matStepperNext class="mx-auto pl-2">Next</button>
+                                </div>
+                            </div>
+            </form>
+          </mat-step>
+
+
+          <mat-step label="Buyers Information " optional >
+            <form >
+              <h1 class="h1-responsive text-center mx-auto font-weight-bold mb-5">Buyers information</h1>
+              <div class="row">
+                <div class="col-12-sm mx-auto">
+                  <h2 class="d-inline">You can optionally add information to be filled from the buyer</h2> <mat-slide-toggle class="ml-3 mb-5"></mat-slide-toggle>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12-sm mx-auto mt-5">
+                  <button mat-raised-button color="primary" matStepperNext class="mx-auto pl-2">Submit</button>
+                </div>
+              </div>
+          
+
+            </form>
+          </mat-step>
+        
+
+      </mat-horizontal-stepper>
+
+</div>
